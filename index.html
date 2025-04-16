@@ -26,7 +26,20 @@
         }
         .strikethrough {
             text-decoration: line-through;
+            text-decoration-thickness: 1.5px;
+            position: relative;
         }
+        .strikethrough::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            height: 1.5px;
+            background-color: #333;
+            transform: translateY(-50%);
+        }
+
         .contact {
             margin-top: 10px;
             font-size: 18px;
